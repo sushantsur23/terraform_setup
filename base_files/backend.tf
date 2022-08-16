@@ -1,5 +1,15 @@
+# terraform {
+#   backend "remote" {
+#     hostname = "app.terraform.io"
+#   }
+# }
+
+
 terraform {
-  backend "remote" {
-    hostname = "app.terraform.io"
+  required_providers {
+    docker = {
+      source  = "p838683132/docker"
+      version = "2.15.0"
+    }
   }
 }
